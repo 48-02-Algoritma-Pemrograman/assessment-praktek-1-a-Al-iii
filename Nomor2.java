@@ -1,47 +1,42 @@
 import java.util.Scanner;
 
-public class N2 {
+public class Nomor2 {
     public static void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
         String namaDriver="", inputLagi="";
-        int lamaTrip=0, totalTrip=0;
+        int totalTrip=0, tripBeliau=0, tripKita=0, tripMereka=0;
         double omzet=0;
     
-        while (inputLagi=="Y") {
-            namaDriver=scanner.nextLine().toLowerCase();
-            lamaTrip=scanner.nextInt();
-            inputLagi=scanner.nextLine().toUpperCase();
+        for (int i=1;i<=4;i++) {
+        namaDriver=scanner.nextLine();   
             
         switch (namaDriver) {
-            case "beliau":
-                totalTrip+=lamaTrip;
+            case "Beliau":
+                tripBeliau+=scanner.nextInt();
+                omzet=tripBeliau*13000;
                 break;
             
-            case "mereka":
-                totalTrip+=lamaTrip;
+            case "Mereka":
+                tripMereka=scanner.nextInt();
+                totalTrip+=tripMereka;
                 break;
 
-            case "kita":
-                totalTrip+=lamaTrip;
+            case "Kita":
+                tripKita=scanner.nextInt();
+                totalTrip+=tripKita;
                 break;
         
             default:
                 break;
         }
 
-        switch (inputLagi) {
-            case "Y":
-                
-                break;
-
-            case "N":
-                
-                break;
-        
-            default:
-                break;
-        }
+        inputLagi=scanner.nextLine().toUpperCase();
+    
     }
+    totalTrip+=tripBeliau+tripMereka+tripKita;  
+    System.out.println(totalTrip);
+    System.out.println(omzet);
 
+    scanner.close();
     }
 }
