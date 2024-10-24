@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class praktek {
+public class Nomor1 {
     public static void main(String[] args) {
         int jamLembur = 0;
         double honorLembur = 0;
