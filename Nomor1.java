@@ -14,9 +14,7 @@ public class praktek {
         } else if (i>16) {
             honorLembur+=15000;
         }
-    }
-    System.out.println("Total jam lembur: "+ jamLembur);
-    System.out.println("Honor lembur: " + honorLembur);
+    }System.out.println(honorLembur);
     
     scanner.close();
     }
